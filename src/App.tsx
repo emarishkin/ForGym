@@ -21,12 +21,19 @@ const App: React.FC = () => {
    localStorage.setItem('workouts', JSON.stringify(updated));
   }
 
+  const handleClear = () => {
+  localStorage.removeItem('workoutEntries');
+  setEntries([]);
+  };  
+
   return (
     <div className="container">
-      <h1>Тренировки Егора и Сергея 💪</h1>
+      <h1>прогресс</h1>
        <WorkoutForm onAdd={addEntry}/>
        <WorkoutList entries={entries} />
-      
+      <button onClick={handleClear} style={{ marginTop: '10px' }}>
+      Очистить все записи
+      </button>
     </div>
   );
 };
