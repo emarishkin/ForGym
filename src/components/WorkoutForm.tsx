@@ -44,7 +44,7 @@ setForm({ ...form, exercise: '', weight: '', reps: '' });
                 <input name="exercise" placeholder="Упражнение" value={form.exercise} onChange={handleChange} required />
                 <input name="weight" type="number" placeholder="Вес (кг)" value={form.weight} onChange={handleChange} required />
                 <input name="reps" type="number" placeholder="Повторения" value={form.reps} onChange={handleChange} required />
-                <button type="submit">Добавить</button>
+                <button type="submit">Добавить +</button>
        </form>
     )
 }
