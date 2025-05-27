@@ -1,0 +1,37 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: #1e1e2f;
+  color: #fff;
+  padding: 2rem;
+}
+
+.app {
+  max-width: 600px;
+  margin: auto;
+  background: #292941;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #00ffe7;
+}
+
+.clear-btn {
+  background: #ff4e4e;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: #cc3a3a;
+}

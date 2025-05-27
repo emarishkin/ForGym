@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.entry {
+  padding: 10px;
+  background: #2f2f45;
+  border-radius: 8px;
+}
+
+.entry.egor {
+  border-left: 5px solid #00c896;
+}
+
+.entry.sergey {
+  border-left: 5px solid #00b0f0;
+}
+
+.empty {
+  text-align: center;
+  font-style: italic;
+  color: #aaa;
+}

@@ -1,19 +1,24 @@
 import React from 'react';
 import type { WorkoutEntry } from '../types/workout';
+import '../styles/List.css'
 
 
 interface Props {
   entries: WorkoutEntry[];
 }
 
-export const WorkoutList: React.FC<Props> = ({ entries }) => {
+const WorkoutList: React.FC<Props> = ({ entries }) => {
+  if (entries.length === 0) return <p className="empty">Пока нет записей...</p>;
+
   return (
-    <div>
+    <div className="list">
       {entries.map((entry) => (
-        <div key={entry.id}>
-          <strong>{entry.user}</strong> — {entry.date} — {entry.exercise}: {entry.weight} кг × {entry.reps}
+        <div key={entry.id} className='entry'>
+          <strong>{entry.user}</strong> — {entry.date} — {entry.exercise}: {entry.weight} кг × {entry.reps} раз
         </div>
       ))}
     </div>
   );
 };
+
+export default WorkoutList;
