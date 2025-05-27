@@ -24,7 +24,7 @@ const handleSubmit = (e:FormEvent) =>{
  e.preventDefault()
  const newEntry:WorkoutEntry = {
     id: Date.now().toString(),
-    user:form.user as 'Егор' | 'Сергей',
+    user:form.user as 'Егор' | 'Сергей' | 'Роман' | 'Слава',
     date:form.date,
     exercise:form.exercise,
     weight:Number(form.weight),
@@ -39,6 +39,8 @@ setForm({ ...form, exercise: '', weight: '', reps: '' });
             <select name="user" value={form.user} onChange={handleChange}>
                 <option value="Егор">Егор</option>
                 <option value="Сергей">Сергей</option>
+                <option value="Роман">Роман</option>
+                <option value="Слава">Слава</option>
             </select>
                 <input name="date" type="date" value={form.date} onChange={handleChange} required />
                 <input name="exercise" placeholder="Упражнение" value={form.exercise} onChange={handleChange} required />

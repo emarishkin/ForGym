@@ -1,6 +1,6 @@
 export interface WorkoutEntry {
   id: string;
-  user: 'Егор' | 'Сергей';
+  user: 'Егор' | 'Сергей' | 'Роман' | 'Слава';
   date: string; 
   exercise: string;
   weight: number;
