@@ -1,0 +1,25 @@
+.menu {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.menu button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background: #444;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu button:hover {
+  background: #00c896;
+}
+
+.menu button.active {
+  background: #00c896;
+}

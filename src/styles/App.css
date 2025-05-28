@@ -20,6 +20,30 @@ h1 {
   color: #00ffe7;
 }
 
+/* Меню */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.menu button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background: #444;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu button:hover {
+  background: #00c896;
+}
+
+/* Кнопка очистки */
 .clear-btn {
   background: #ff4e4e;
   border: none;
@@ -34,4 +58,14 @@ h1 {
 
 .clear-btn:hover {
   background: #cc3a3a;
+}
+
+/* Плейсхолдер для статистики */
+.stats-placeholder {
+  padding: 2rem;
+  text-align: center;
+  background: #2f2f45;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #bbb;
 }
