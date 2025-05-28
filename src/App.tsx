@@ -6,6 +6,7 @@ import { NutritionForm } from './components/NutritionForm';
 import type { NutritionEntry } from './types/NutritionEntry';
 import NutritionStats from './components/NutritionStats';
 import WorkoutList from './components/WorkoutList';
+import Navigation from './components/Navigation';
 
 
 const App: React.FC = () => {
@@ -37,6 +38,11 @@ const App: React.FC = () => {
     localStorage.setItem('workoutEntries', JSON.stringify(newEntries));
   };
 
+  const handleClearNutrition = () => {
+  localStorage.removeItem('nutritionEntries');
+  setNutritionEntries([]);
+};
+
   const totalCalories = nutritionEntries.reduce((acc, curr) => acc + curr.calories, 0);
   const totalBurnedCalories = workoutEntries.reduce((acc, curr) => acc + (curr.weight * curr.reps), 0); 
   
@@ -45,13 +51,23 @@ const App: React.FC = () => {
     <div className="app">
       <h1>💪 Тренировки</h1>
       
-      <button onClick={() => setPage('form')}>Добавить тренировку</button>
-      <button onClick={() => setPage('nutrition')}>Питание</button>
-      <button onClick={() => setPage('list')}>Записи</button>
-      <button onClick={() => setPage('stats')}>Статистика</button>
+      <Navigation  currentPage={page} onChange={setPage}/>
       
       {page === 'form' && <WorkoutForm onAdd={handleAddWorkout} />}
-      {page === 'nutrition' && <NutritionForm onAdd={handleAddNutrition} />}
+      {page === 'nutrition' && (
+        <>
+          <NutritionForm onAdd={handleAddNutrition} />
+          {nutritionEntries.length > 0 && (
+            <button className="clear-btn" onClick={() => {
+             if (confirm('Точно очистить все записи по питанию?')) {
+          handleClearNutrition();
+              }
+           }}>
+              Очистить питание
+            </button>
+         )}
+        </>
+      )}
       {page === 'stats' && <NutritionStats entries={nutritionEntries} totalCalories={totalCalories} totalBurnedCalories={totalBurnedCalories} />}
       {page === 'list' && <WorkoutList entries={workoutEntries} />}
     </div>

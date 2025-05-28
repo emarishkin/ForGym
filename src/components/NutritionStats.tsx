@@ -1,5 +1,6 @@
 import React from 'react';
 import type { NutritionEntry } from '../types/NutritionEntry';
+import '../styles/NutritionStats.css'
 
 
 interface Props {

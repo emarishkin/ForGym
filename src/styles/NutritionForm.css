@@ -1,0 +1,40 @@
+.nutrition-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #2f2f45;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.nutrition-form select,
+.nutrition-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #3a3a55;
+  color: #fff;
+}
+
+.nutrition-form input::placeholder {
+  color: #ccc;
+}
+
+.nutrition-form button {
+  padding: 12px;
+  background: #00c896;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nutrition-form button:hover {
+  background: #00a77b;
+}

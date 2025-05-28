@@ -1,0 +1,26 @@
+.nutrition-stats {
+  background: #2a2a3d;
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 0 16px rgba(0, 255, 255, 0.1);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.nutrition-stats h3 {
+  text-align: center;
+  color: #00ffe7;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.nutrition-stats p {
+  margin: 6px 0;
+}
+
+.nutrition-stats p:nth-child(even) {
+  background: #33334d;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
